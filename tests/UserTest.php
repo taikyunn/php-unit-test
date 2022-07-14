@@ -123,4 +123,28 @@ class UserTest extends TestCase
      */
     $this->assertArrayHasKey('foo', ['foo' => 'baz']);
   }
+
+  /**
+   * assertClassHasAttribute
+   * 第二引数に指定したクラス内に、第一引数で指定した、プロパティ名やメンバ変数が存在する場合true
+   */
+  public function testAssertClassHasAttribute() {
+    $this->assertClassHasAttribute('firstName', User::class);
+  }
+
+   /**
+   * assertClassNotHasAttribute
+   * 第二引数に指定したクラス内に、第一引数で指定した、プロパティ名やメンバ変数がしない場合true
+   */
+  public function testAssertClassNotHasAttribute() {
+    $this->assertClassNotHasAttribute('testName', User::class);
+  }
+
+  /**
+   * assertClassNotHasAttribute
+   * 第二引数に指定したクラス内に、第一引数で指定した、静的な属性(プロパティ・メンバ変数)が存在する場合true
+   */
+  public function testAssertClassHasStaticAttribute() {
+    $this->assertClassHasStaticAttribute('man', User::class);
+  }
 }

@@ -7,6 +7,8 @@ class User {
 
   public $lastName;
 
+  static public $man;
+
   public function getFullName() {
     return $this->firstName. ' '.$this->lastName;
   }

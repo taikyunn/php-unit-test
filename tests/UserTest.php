@@ -74,7 +74,8 @@ class UserTest extends TestCase
   }
 
 
-  public function test_return_full_name() {
+  public function test_return_full_name()
+  {
     /**
      * テスト実行コマンド
      * vendor/bin/phpunit tests
@@ -109,5 +110,17 @@ class UserTest extends TestCase
 
     // 第一引数と第二引数を==で比較する
     $this->assertEquals(4, $result);
+  }
+
+  /**
+   * assertArrayHasKey
+   * 第二引数の配列のキーに第一引数の値が設定されていない場合エラーになる
+   */
+  public function testAssertArrayHasKey() {
+    /**
+     * エラーパターン
+     * $this->assertArrayHasKey('foo', ['var' => 'baz']);
+     */
+    $this->assertArrayHasKey('foo', ['foo' => 'baz']);
   }
 }

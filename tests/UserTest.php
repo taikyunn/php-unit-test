@@ -148,3 +148,4 @@ class UserTest extends TestCase
     $this->assertClassHasStaticAttribute('man', User::class);
   }
 }
+

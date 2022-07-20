@@ -17,3 +17,4 @@ class User {
     return strlen($this->firstName);
   }
 }
+
